@@ -1,0 +1,93 @@
+<div class="grid-container">
+  <div class="item1">
+    <h3 class="tableheader">USER LIST</h3>
+    <hr>
+    <div class="container">
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" style="width: 100%; padding: 15px;">
+
+          <!-- Checkbox Column -->
+          <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-checkbox (change)="$event ? masterToggle() : null"
+                [checked]="selection.hasValue() && isAllSelected()"
+                [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+              </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+              </mat-checkbox>
+            </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+          <!-- Gender Column -->
+          <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+          </ng-container>
+
+          <!-- Address Column -->
+          <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef> Address </th>
+            <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+          </ng-container>
+
+          <!-- DOB Column -->
+          <ng-container matColumnDef="dob">
+            <th mat-header-cell *matHeaderCellDef> Date Of Birth </th>
+            <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let row">{{row.edit}}
+              <button mat-icon-button (click)="editUsersdetails(row)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element">{{element.delete}}
+              <button mat-icon-button (click)="deleteUserDetails(element)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+          </tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+  <div class="item2">
+    <h3 class="tableheader"> PROGRESS</h3>
+    <hr>
+    <div class="progressbar">
+      <mat-progress-bar class="progresscolor" mode="determinate" [value]="progressbarValue"></mat-progress-bar>
+    </div>
+    <div class="count">
+      <h4><b>Male Users:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{male}}</h4>
+      <h4><b>Female Users:</b>&nbsp;&nbsp;{{female}}</h4>
+    </div>
+
+  </div>
+</div>

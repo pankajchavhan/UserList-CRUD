@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-toolbar{
+    background-color: white;
+    height: 40px;
+  }
+  .grid-container {
+   
+    
+    background-color: rgb(247, 243, 242);
+    padding-top: 10px;
+  }
+  
+ 

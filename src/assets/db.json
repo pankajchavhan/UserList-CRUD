@@ -1,0 +1,60 @@
+{
+    "Users": [
+      { "id": 1,
+        "name": "Pankaj Chavhan",
+        "email": "pankajchavhan5@gmail.com",
+        "gender":"Male",
+        "address":" 61/B,sainathnagar,Nigdi, Pune",
+        "dob":"13/02/1994"
+    },
+    { "id": 2,
+      "name": "Saurabh patil",
+      "email": "saurabh@gmail.com",
+      "gender":"Male",
+      "address": "sangli",
+      "dob":"09/04/1991"
+    },
+    { "id": 3,
+      "name": "Aditya Chavhan",
+      "email": "Aditya@gmail.com",
+      "gender":"Male",
+      "address": "Alandi",
+      "dob":"28/02/1994"
+    },
+    { "id": 4,
+      "name": "Shital Shere",
+      "email": "shital@gmail.com",
+      "gender":"Female",
+      "address": "chandrapur",
+      "dob":"09/04/1994"
+    },
+    { "id": 5,
+      "name": "Pallavi Chavhan",
+      "email": "pallavi@gmail.com",
+      "gender":"Female",
+      "address":" Chinchwad",
+      "dob":"13/02/1988"
+  },
+  { "id": 6,
+    "name": "Leanne Graham",
+    "email": "Sincere@april.biz",
+    "gender":"Male",
+    "address": "Kulas Light",
+    "dob":"09/04/1993"
+  },
+  { "id": 7,
+    "name": "Ervin Howell",
+    "email": "Shanna@melissa.tv",
+    "gender":"Female",
+    "address": "Victor Plains",
+    "dob":"19/05/1996"
+  },
+  { "id": 8,
+    "name": "Clementine Bauch",
+    "email": "Nathan@yesenia.net",
+    "gender":"Male",
+    "address": "Douglas Extension",
+    "dob":"29/04/1996"
+  }
+    ]
+  }

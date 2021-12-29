@@ -1,0 +1,71 @@
+table {
+    width: 80%;
+  }
+  th{
+background-color: #00a99d;
+color: white;
+  }
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    background-color: rgb(247, 243, 242);
+    padding: 10px;
+  }
+  
+  
+  
+  .item1 {
+    grid-column:1/6;
+  }
+  .item2 {
+    height: 200px;
+  }
+  .tableheader{
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom:0px;
+    
+  }
+  .count{
+    text-align: left;
+    margin-left: 10px;
+    
+  }
+  
+  ::ng-deep .mat-checkbox .mat-checkbox-frame {
+    border-color:gray;
+    background-color: white;
+  }
+  .mat-header-cell {
+    text-align: left;
+    margin-left: 20px;
+  }
+  .mat-cell{
+    text-align: left;
+    margin-left: 20px;
+  }
+  .table{
+    margin-left: 20px;
+  }
+  
+  .progressbar{
+    padding: 5%;
+    }
+    ::ng-deep .mat-progress-bar-fill::after {
+      background-color: #00a99d;
+  }
+  
+  ::ng-deep .mat-progress-bar-buffer {
+      background: #E4E8EB;
+     
+  }
+  
+  ::ng-deep .mat-progress-bar {
+      border-radius: 2px;
+     
+  }
+ 
+  

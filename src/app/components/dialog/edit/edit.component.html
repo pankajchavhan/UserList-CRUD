@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="modelheader">
+    <h3 style="font-weight: bold;">Edit User 
+      <mat-card-actions style="margin-left:70%;">
+        <button mat-button tabindex="-1" (click)="onNoClick()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-card-actions>
+    </h3>
+  </div>
+
+  <form class="mat-dialog-content" (ngSubmit)="submit" #formControl="ngForm">
+
+    <!-- <div class="form">
+        <mat-form-field color="accent">
+          <input matInput #input class="form-control"  [(ngModel)]="data.id" name="id" required >
+          <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div> -->
+
+    <!--Textarea for demo purposes-->
+    <fieldset id="name">
+      <legend>Name</legend>
+      <div class="form">
+        <input matInput #input class="form-control" [(ngModel)]="data.name" name="name" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </div>
+    </fieldset>
+    <br>
+    <!--Contains mat-hint for characters count and has maxLengt set-->
+    <fieldset id="name">
+      <legend>Email</legend>
+      <div class="form">
+        <input matInput #inputstate class="form-control" [(ngModel)]="data.email" name="email" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </div>
+    </fieldset>
+    <br>
+    <div class="form-group">
+      Gender: &nbsp;&nbsp;
+      <mat-radio-group>
+        <mat-radio-button value="0" [checked]="isMale">Male</mat-radio-button>&nbsp;&nbsp;
+        <mat-radio-button valu1="1" [checked]="isFemale">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <br>
+    <!-- <div class="form">
+      <mat-form-field color="accent">
+        <input matInput [(ngModel)]="data.gender" name="gender">
+      </mat-form-field>
+    </div> -->
+
+    <fieldset>
+      <div class="form">
+        <input matInput [(ngModel)]="data.dob" name="dob">
+      </div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+
+        <textarea matInput [(ngModel)]="data.address" placeholder="Address" name="address"></textarea>
+    </fieldset>
+<br>
+    <div mat-dialog-actions>
+        <mat-card-actions style="margin-left: 78%" align="end">
+          <button mat-button class="button" (click)="onSave()" >Submit</button>
+        </mat-card-actions>
+    </div>
+  </form>
+</div>
